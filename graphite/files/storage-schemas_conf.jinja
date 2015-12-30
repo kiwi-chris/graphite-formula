@@ -1,0 +1,21 @@
+# !!! FILE MANAGED BY SALT !!!
+#
+# {{ salt['pillar.get']('SALT_MANAGED') }}
+# Source: {{ source }}
+
+# Schema definitions for Whisper files. Entries are scanned in order,
+# and first match wins. This file is scanned for changes every 60 seconds.
+#
+#  [name]
+#  pattern = regex
+#  retentions = timePerPoint:timeToStore, timePerPoint:timeToStore, ...
+# Carbon's internal metrics. This entry should match what is specified in
+# CARBON_METRIC_PREFIX and CARBON_METRIC_INTERVAL settings
+[carbon]
+pattern = ^carbon\.
+retentions = 60:90d
+
+# Keep 10 second intervals for 14 days, 1 min for 72 days, etc..
+[default]
+pattern = .*
+retentions = 10:14d, 1m:72d, 15m:720d

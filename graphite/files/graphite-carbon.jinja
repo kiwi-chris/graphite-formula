@@ -1,0 +1,8 @@
+# !!! FILE MANAGED BY SALT !!!
+# {{ salt['pillar.get']('SALT_MANAGED') }}
+# Source: {{ source }}
+
+{%- from "graphite/map.jinja" import map with context %}
+
+# Change to true, to enable carbon-cache on boot
+CARBON_CACHE_ENABLED={{ salt['pillar.get']('graphite:carbondefault', 'true') }}

@@ -1,0 +1,15 @@
+{% set map = salt['grains.filter_by']({
+    'Debian': {
+        'pkgs': [
+	    'graphite-web',
+	    'graphite-carbon',
+	    ],
+        'carbon_default_file': '/etc/default/carbon',
+        'carbon_conf_file': '/etc/carbon/carbon.conf',
+        'carbon_storage_conf': '/etc/carbon/storage-schemas.conf',
+        'web_conf_file': '/etc/graphite/local_settings.py',
+        'service': 'carbon-cache',
+        'user': '_graphite',
+        'group': '_graphite',
+    },
+}, merge=salt['pillar.get']('graphite:lookup')) %}

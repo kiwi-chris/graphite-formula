@@ -1,0 +1,6 @@
+
+graphite:
+  config:
+    secret_key: "'g1ve_your_best'"
+    time_zone: "'Europe/Berlin'"
+    carbondefault: 'false' # Don't start carbon when OS starts
