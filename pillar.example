@@ -4,3 +4,6 @@ graphite:
     secret_key: "'g1ve_your_best'"
     time_zone: "'Europe/Berlin'"
     carbondefault: 'false' # Don't start carbon when OS starts
+    admin_user: 'root'
+    admin_email: 'root@angitu.de'
+    admin_password: 'pbkdf2_sha256$15000$9BspBY5ffuv2$RtFGFFgZQZHMlxuoGUy7WDdNso9lEU9AqHiJm+Q6Rx8='
