@@ -7,3 +7,4 @@ graphite:
     admin_user: 'root'
     admin_email: 'root@angitu.de'
     admin_password: 'pbkdf2_sha256$15000$9BspBY5ffuv2$RtFGFFgZQZHMlxuoGUy7WDdNso9lEU9AqHiJm+Q6Rx8='
+    udplistener: 'True'
